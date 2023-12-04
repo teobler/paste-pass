@@ -1,10 +1,13 @@
 import keychain from "keychain";
-import { Clipboard } from "@raycast/api";
+import { Clipboard, getPreferenceValues } from "@raycast/api";
 
-const service = "your service";
-const account = "your service";
+interface Preferences {
+  account: string;
+  service: string;
+}
 
 const Command = async () => {
+  const { account, service } = getPreferenceValues<Preferences>();
   await new Promise((resolve) =>
     keychain.getPassword({ account, service }, async (error, pass) => {
       if (error) {

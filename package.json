@@ -15,7 +15,23 @@
       "title": "paste pass",
       "subtitle": "paste pass to input",
       "description": "paste pass to input",
-      "mode": "no-view"
+      "mode": "no-view",
+      "preferences": [
+        {
+          "name": "service",
+          "title": "Service",
+          "description": "keychain service",
+          "type": "textfield",
+          "required": true
+        },
+        {
+          "name": "account",
+          "title": "Account",
+          "description": "keychain account",
+          "type": "textfield",
+          "required": true
+        }
+      ]
     }
   ],
   "dependencies": {
